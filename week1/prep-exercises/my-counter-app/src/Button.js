@@ -4,7 +4,7 @@ function Button({ setCount }) {
   };
   
   return (
-    <button onClick={handleClick}>Add 1!</button>
+    <button onClick={handleClick}>Add One</button>
   );
 }
 

@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --body-bg: linear-gradient(to top left, #ACA3E2, #C08E6C);
+  --container-bg: #544C93;
+  --text: #FAEBD4;
+  --btn-bg: #F7941A;
+  --btn-hover: #C08E6C;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Space Grotesk";
+  background: var(--body-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  background-color: var(--container-bg);
+  text-align: center;
+  padding: 10%;
+  border-radius: 20px;
+}
+
+h1, h2 {
+  color: var(--text);
+}
+
+button {
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 4% 10%;
+  font-family: "Space Grotesk";
+  color: var(--container-bg);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--btn-hover);
 }
