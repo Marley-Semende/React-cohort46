@@ -73,8 +73,22 @@ img {
    cursor: pointer;
 }
 
-@media (min-width: 600px) {
-  .main-container {
-width: 80%;
+@media (max-width: 600px) {
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(1, 280px);
+    grid-row-gap: 12px;
+    width: 70%;
+    margin: auto;
+    
+  }
+
+  h2 {
+    overflow: auto;
+    width: 420px
+  }
+  button {
+    font-size: 1.4rem;
+    padding: 6px;
   }
 }
