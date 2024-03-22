@@ -1,10 +1,6 @@
 import Page from "./components/Page";
 const App = () => {
-  return (
-    <>
-      <Page />
-    </>
-  )
-}
+  return <Page />;
+};
 
-export default App
+export default App;

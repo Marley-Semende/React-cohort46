@@ -1,26 +1,21 @@
-import React, { useState } from 'react';
-import Header from './Header';
-import ProductList from './ProductList';
-import products from '../fake-data/all-products';
- 
+import { useState } from "react";
+import Header from "./Header";
+import ProductList from "./ProductList";
+import products from "../fake-data/all-products";
+
 const Page = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
- 
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
+
+  const handleCategoryClick = (button) => {
+    setSelectedCategory(button);
   };
 
-  const filteredProducts = selectedCategory
-  ? products.filter(product => product.category === selectedCategory)
-  : products;
- 
   return (
     <div className="main-container">
-      <Header onCategoryClick={handleCategoryClick} />
-     
+      <Header onButtonClick={handleCategoryClick} />
       <ProductList selectedCategory={selectedCategory} products={products} />
     </div>
   );
-}
- 
+};
+
 export default Page;
