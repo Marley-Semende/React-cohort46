@@ -6,13 +6,13 @@ import products from "../fake-data/all-products";
 const Page = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const handleCategoryClick = (button) => {
-    setSelectedCategory(button);
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
   };
 
   return (
     <div className="main-container">
-      <Header onButtonClick={handleCategoryClick} />
+      <Header onCategoryClick={handleCategoryClick} />
       <ProductList selectedCategory={selectedCategory} products={products} />
     </div>
   );

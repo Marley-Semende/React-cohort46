@@ -2,11 +2,7 @@ import PropTypes from "prop-types";
 import Button from "./Button";
 import categories from "../fake-data/all-categories";
 
-const Header = ({ onButtonClick }) => {
-  const handleClick = (category) => {
-    onButtonClick(category);
-  };
-
+const Header = ({ onCategoryClick }) => {
   return (
     <header>
       <h1>Products</h1>
@@ -15,8 +11,8 @@ const Header = ({ onButtonClick }) => {
         {categories.map((category) => (
           <Button
             key={category}
-            button={category}
-            onButtonClick={handleClick}
+            label={category.split(": ")[1]}
+            onButtonClick={onCategoryClick}
           />
         ))}
       </div>
@@ -25,7 +21,7 @@ const Header = ({ onButtonClick }) => {
 };
 
 Header.propTypes = {
-  onButtonClick: PropTypes.func.isRequired,
+  onCategoryClick: PropTypes.func.isRequired,
 };
 
 export default Header;
