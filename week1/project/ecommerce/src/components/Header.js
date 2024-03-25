@@ -12,7 +12,7 @@ const Header = ({ onCategoryClick }) => {
           <Button
             key={category}
             label={category.split(": ")[1]}
-            onButtonClick={onCategoryClick}
+            onClick={onCategoryClick}
           />
         ))}
       </div>
