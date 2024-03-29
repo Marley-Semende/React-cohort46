@@ -22,6 +22,8 @@ const Header = ({ onCategoryClick }) => {
         setLoading(false);
       } catch (error) {
         setError(error);
+       
+      } finally {
         setLoading(false);
       }
     };
