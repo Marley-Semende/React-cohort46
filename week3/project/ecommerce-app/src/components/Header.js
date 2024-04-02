@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Button from "./Button";
+import NavBar from "./NavBar";
 
 const Header = ({ onCategoryClick }) => {
   const [categories, setCategories] = useState([]);
@@ -36,6 +37,7 @@ const Header = ({ onCategoryClick }) => {
   return (
     <header>
       <h1>Products</h1>
+      <NavBar />
       <div className="button-container">
         {categories.map((category) => (
           <Button

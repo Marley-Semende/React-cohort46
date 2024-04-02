@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFavorites } from "../contexts/FavoritesContext";
 import { ProductCard } from "./ProductCard";
+import NavBar from "./NavBar";
 
 const FavoritesPage = () => {
   const { favorites } = useFavorites();
@@ -32,6 +33,7 @@ const FavoritesPage = () => {
   return (
     <div>
       <h1>Favorites</h1>
+      <NavBar />
       <div className="favorite-products">
         {favoriteProducts.map((product) => (
           <ProductCard
@@ -39,8 +41,9 @@ const FavoritesPage = () => {
             id={product.id}
             title={product.title}
             image={product.image}
-            price={product.price}
-            rate={product.rating.rate}
+           price={product.price}
+           rate={product.rating.rate}
+            
           />
         ))}
       </div>
