@@ -2,8 +2,7 @@ import PropTypes from "prop-types";
 import { useFavorites } from "../contexts/FavoritesContext";
 import regularHeart from "../assets/heart-regular.svg";
 import solidHeart from "../assets/heart-solid.svg";
-
-const euroSymbol = String.fromCodePoint(0x020ac);
+import euroSymbol from "../util/util";
 
 const ProductCard = ({ image, title, rate, price, id }) => {
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();

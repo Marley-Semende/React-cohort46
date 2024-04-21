@@ -41,9 +41,8 @@ const FavoritesPage = () => {
             id={product.id}
             title={product.title}
             image={product.image}
-           price={product.price}
-           rate={product.rating.rate}
-            
+            price={product.price}
+            rate={product.rating.rate}
           />
         ))}
       </div>

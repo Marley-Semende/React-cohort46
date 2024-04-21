@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
-import { euroSymbol } from "./ProductCard";
+import euroSymbol from "../util/util";
 import useFetch from "./useFetch";
 
 const DetailPage = () => {
   const { id } = useParams();
-  const { data, loading, error } = useFetch(
-    `https://fakestoreapi.com/products/${id}`
-  );
+  const {
+    data: product,
+    loading,
+    error,
+  } = useFetch(`https://fakestoreapi.com/products/${id}`);
 
   if (loading) {
     return <div className="loading">Loading...Loading...</div>;
@@ -16,11 +18,9 @@ const DetailPage = () => {
     return <div>Error: {error}</div>;
   }
 
-  if (!data) {
+  if (!product) {
     return <div>Product not found</div>;
   }
-
-  const product = data;
 
   return (
     <div className="detail-page">
